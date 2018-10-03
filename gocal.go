@@ -3,6 +3,7 @@ package main
 
 //importing fmt package for basic functions
 import "fmt"
+import "math"
 
 //declaration of variables
 var num1 float32
@@ -26,6 +27,10 @@ func multiply(a float32, b float32)float32{
 
 func divide(a float32, b float32)float32{
   return a/b
+}
+
+func power(a float32, b float32)float32{
+  return math.Pow(a, b)
 }
 
 //main function
@@ -59,6 +64,10 @@ if (operator == "+"){
 }else if (operator == "/"){
   fmt.Print("Your answer is: ")
   fmt.Println(divide(num1,num2))
+  fmt.Println("\n")
+}else if (operator == "^"){
+  fmt.Print("Your answer is: ")
+  fmt.Println(power(num1,num2))
   fmt.Println("\n")
 }
 
